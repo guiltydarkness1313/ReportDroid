@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.reportdroid.shibuyaxpress.reportdroid.Activities.RegisterReportActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/input_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Titulo"
+
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/input_des"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Descripción"
+            android:inputType="textMultiLine" />
+
+        <EditText
+            android:id="@+id/input_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Dirección"
+            android:inputType="textPostalAddress" />
+
+        <Button
+            android:id="@+id/btn_locate_reg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="mapa" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/img_new_add"
+        android:text="Subir imagen" />
+
+    <ImageView
+        android:id="@+id/img_new_add"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_above="@id/btn_register"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/ic_menu_gallery" />
+
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:onClick="callRegister"
+        android:text="Registrar" />
+
+
+</RelativeLayout>
