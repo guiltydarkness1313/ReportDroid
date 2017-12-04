@@ -286,7 +286,7 @@ public class RegisterActivity extends AppCompatActivity {
             RequestBody userPart = RequestBody.create(MultipartBody.FORM, user);
             RequestBody emailPart = RequestBody.create(MultipartBody.FORM, email);
             RequestBody passwordPart = RequestBody.create(MultipartBody.FORM, password);
-            call=service.createUserWithImage(userPart,emailPart,passwordPart,imagenPart);
+            call=service    .createUserWithImage(userPart,emailPart,passwordPart,imagenPart);
         }
 
         call.enqueue(new Callback<ResponseMessage>() {
